@@ -96,7 +96,7 @@ let
   enkucuk=sayilar[0],
   enbuyuk=sayilar[0],
  
-  siralisayilar,
+  
   tekraredensayilar;
 
 // 3a çözümü 
@@ -136,7 +136,9 @@ console.log(besyuzdenkucuksayilar)
 
 // 3e çözümü
 
-/* kodlar buraya */
+let siralisayilar=0;
+siralisayilar=besyuzdenkucuksayilar.sort((a,b)=>a-b);
+console.log(siralisayilar);
 
 // 3f çözümü
 
