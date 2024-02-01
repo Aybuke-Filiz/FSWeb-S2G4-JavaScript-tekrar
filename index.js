@@ -143,18 +143,21 @@ console.log(siralisayilar);
 
 // 3f çözümü
 
-let tekraredensayilar = sayilar.reduce(function(accumulator, sayi) {
-  accumulator[sayi] = (accumulator[sayi] || 0) + 1;
-  return accumulator;
-}, {});
-tekraredensayilar = Object.entries(tekraredensayilar).reduce(function(result, [sayi, tekrarSayisi]) {
-  if (tekrarSayisi > 1) {
-      let tekrarString =` ${sayi} sayısı  ${tekrarSayisi}  kere tekrar edilmiştir`;
-      result.push(tekrarString);
+let tekraredensayilar = [];
+let tekrarlar = [];
+sayilar.forEach(function(sayi) {
+  if (tekrarlar[sayi] === undefined) {
+      tekrarlar[sayi] = 1;
+  } else {
+      tekrarlar[sayi]++;
   }
-  return result;
-}, []);
-console.log(tekraredensayilar);
+});
+for (let sayi in tekrarlar) {
+  let tekrarSayisi = tekrarlar[sayi];
+  let tekrarEdenSayiString = `${sayi} sayısı  ${tekrarSayisi}  kere tekrar edilmiştir`
+  tekraredensayilar.push(tekrarEdenSayiString);
+}
+console.log (tekraredensayilar)
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
