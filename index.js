@@ -67,6 +67,9 @@ function CemberinCevresi(yariCap) {
 function CemberinAlani(yariCap, pi) {
   return pi*Math.pow(yariCap,2);
 }
+let yariCap=15;
+let alan= CemberinAlani (yariCap,pi);
+console.log(alan);
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
