@@ -92,15 +92,14 @@ console.log(alan);
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-let ucetambolunenler=[],
+let 
   enkucuk=sayilar[0],
   enbuyuk=sayilar[0],
-  ucebolunenlerintoplami,
-  besyuzdenkucuksayilar,
+ 
   siralisayilar,
   tekraredensayilar;
 
-// 3a çözümü
+// 3a çözümü 
 
 for (let i=1;i<sayilar.length; i++ ){
  if (sayilar[i]<enkucuk) {
@@ -111,24 +110,29 @@ for (let i=1;i<sayilar.length; i++ ){
 }
 }
 console.log(enkucuk);
-console.log(enbuyuk);
+console.log(enbuyuk); 
 // 3b çözümü:
-
+let ucetambolunenler=[]
 sayilar.forEach(function(sayi) {
   if (sayi % 3 === 0) {
       ucetambolunenler.push(sayi);
   }
 });
-console.log(ucetambolunenler)
+console.log(ucetambolunenler) 
 
 
 // 3c çözümü:
 
-/* kodlar buraya */
+let ucebolunenlerintoplami=0;
+ucebolunenlerintoplami =ucetambolunenler.reduce(function(toplam,sayi){
+  return toplam+sayi;
+},0)
+console.log(ucebolunenlerintoplami);
 
 // 3d çözümü
-
-/* kodlar buraya */
+let besyuzdenkucuksayilar=[];
+besyuzdenkucuksayilar=sayilar.filter((sayi)=>sayi<500);
+console.log(besyuzdenkucuksayilar)
 
 // 3e çözümü
 
