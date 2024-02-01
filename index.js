@@ -93,11 +93,12 @@ console.log(alan);
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
 let 
-  enkucuk=sayilar[0],
-  enbuyuk=sayilar[0],
+
+
+  enkucuk=sayilar[0];
+  enbuyuk=sayilar[0];
  
   
-  tekraredensayilar;
 
 // 3a çözümü 
 
@@ -142,7 +143,18 @@ console.log(siralisayilar);
 
 // 3f çözümü
 
-/* kodlar buraya */
+let tekraredensayilar = sayilar.reduce(function(accumulator, sayi) {
+  accumulator[sayi] = (accumulator[sayi] || 0) + 1;
+  return accumulator;
+}, {});
+tekraredensayilar = Object.entries(tekraredensayilar).reduce(function(result, [sayi, tekrarSayisi]) {
+  if (tekrarSayisi > 1) {
+      let tekrarString =` ${sayi} sayısı  ${tekrarSayisi}  kere tekrar edilmiştir`;
+      result.push(tekrarString);
+  }
+  return result;
+}, []);
+console.log(tekraredensayilar);
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
